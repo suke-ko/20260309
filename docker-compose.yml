@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app # <-- これを入れると、コードを書き換えたら即反映されます！
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saikoro</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center p-4">
+    <div class="max-w-xl w-full mt-10">
+        <form hx-post="/roll" hx-target="#dice-result" hx-swap="outerHTML" class="space-y-6">
+            <button type="submit" class="w-full bg-blue-500 text-white rounded">実行</button>
+        </form>
+        <div id="dice-result"></div>
+    </div>
+</body>
+
+</html>
